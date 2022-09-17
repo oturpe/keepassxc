@@ -65,6 +65,7 @@ void TestCli::initTestCase()
     QVERIFY(Crypto::init());
 
     Config::createTempFileInstance();
+    config()->set(Config::GUI_Language, "en_US");
     Bootstrap::bootstrap();
 
     m_devNull.reset(new QFile());
